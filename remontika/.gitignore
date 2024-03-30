@@ -1,0 +1,9 @@
+# Virtual environment
+/r_env/
+
+# Ignore database files
+db.sqlite3
+
+# Ignore other generated files
+/__pycache__/
+*.pyc
