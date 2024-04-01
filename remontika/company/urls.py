@@ -8,4 +8,7 @@ app_name = 'company'
 urlpatterns = [
     # Home page
     path('', views.index, name='index'),
+    
+    # Page that show all services.
+    path('service/', views.services, name='service'),
 ]

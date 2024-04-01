@@ -1,0 +1,16 @@
+{% extends "company/base.html" %}
+
+{% block content %}
+
+<p>Company</p>
+
+<h2>Our Services</h2>
+    <ul>
+        {% for service in services %}
+            <li>{{ service.title }}</li>
+            <p>{{ service.description }}</p>
+        {% endfor %}
+    </ul>
+</h2>
+
+{% endblock content %}
