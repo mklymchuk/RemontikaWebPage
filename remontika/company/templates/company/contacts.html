@@ -1,0 +1,16 @@
+{% extends "company/base.html" %}
+
+{% block content %}
+<h2>Contact Us</h2>
+    <ul>
+        {% for contact in contacts %}
+            <li>Name: {{ contact.name }}</li>
+            <li>Email: {{ contact.email }}</li>
+            <li>Phone: {{ contact.phone }}</li>
+            <li>Message: {{ contact.message }}</li>
+            <hr> <!-- Optional: Add a horizontal line between contacts -->
+        {% empty %}
+            <li>No contacts available</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

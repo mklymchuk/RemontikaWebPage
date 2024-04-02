@@ -11,4 +11,7 @@ urlpatterns = [
     
     # Page that show all services.
     path('service/', views.services, name='service'),
+    
+    # Page that show all contacts. 
+    path('contact/', views.contacts, name='contacts'),
 ]
