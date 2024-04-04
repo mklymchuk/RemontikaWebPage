@@ -1,16 +1,22 @@
 {% extends "company/base.html" %}
 
 {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <p class="mb-4">Company</p>
 
-<p>Company</p>
-
-<h2>Our Services</h2>
-    <ul>
-        {% for service in services %}
-            <li>{{ service.title }}</li>
-            <p>{{ service.description }}</p>
-        {% endfor %}
-    </ul>
-</h2>
-
+            <h2 class="mb-3">Our Services</h2>
+            
+            <ul class="list-group">
+                {% for service in services %}
+                    <li class="list-group-item">
+                        <h5 class="mb-1">{{ service.title }}</h5>
+                        <p class="mb-1">{{ service.description }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock content %}
