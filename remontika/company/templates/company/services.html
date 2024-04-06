@@ -1,13 +1,14 @@
 {% extends "company/base.html" %}
 
+<!--Load static-->
+{% load static %}
+
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <p class="mb-4">Company</p>
-
             <h2 class="mb-3">Our Services</h2>
-            
             <ul class="list-group">
                 {% for service in services %}
                     <li class="list-group-item">
@@ -16,6 +17,28 @@
                     </li>
                 {% endfor %}
             </ul>
+            <h2 class="mt-5 mb-3">Albums</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static '/company/primTech_1.webp' %}" class="card-img-top" alt="Album 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Album 1</h5>
+                            <p class="card-text">Description of album 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static '/company/hq720.jpg' %}" class="card-img-top" alt="Album 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Album 2</h5>
+                            <p class="card-text">Description of album 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more albums here -->
+            </div>
         </div>
     </div>
 </div>
